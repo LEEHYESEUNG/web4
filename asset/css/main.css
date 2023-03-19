@@ -162,10 +162,10 @@
     }
 
     .search-area .keyword-box label{
-        padding-left: 58px;
+        padding-left: 48px;
     }
     .search-area .keyword-box::before{
-        left: 20px;
+        left: 15px;
     }
 
     /* .people */
