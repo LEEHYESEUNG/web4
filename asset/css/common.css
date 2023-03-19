@@ -1,0 +1,36 @@
+body{ font-family: 'tthoves', 'nanumsquare', sans-serif; color: #000; font-size: 14px; font-weight: normal; }
+body.overflow{ overflow: hidden; }
+
+.blind{ position: absolute; overflow: hidden; width: 1px; height: 1px; clip: rect(0 0 0 0); margin: -1px; }
+
+
+/* icon (공용) */
+.header .header-group .link-logo::after,
+.citylang .btn-lang,
+.search-area .keyword-box::before,
+.control-box .btn-prev::after,
+.control-box .btn-next::after,
+.teams .teams-item .link-item .crop-text::after,
+.support .link-support .support-icon,
+.footer .site-group .title::after,
+.control-box a.disabled,
+.search-menu .search-item::before,
+.search-menu .sub-item+.sub-item::before,
+.search-menu .search-box::after
+{
+    background-image: url(../img/crop-icon.png);
+    background-size: 328px 205px;
+}
+
+
+.search-area-min .search-box::after,
+.menu-open .menu-item .arrow-icon,
+.btn-menu,
+.btn-menu.close,
+.search-menu .close,
+.support .link-support .support-icon-min
+{
+    background-image: url(../img/min-icon.png);
+    background-size: 195px 181px;
+
+}

@@ -1,0 +1,170 @@
+@import './font.css';
+@import './reset.css';
+@import './common.css';
+
+
+.header{position: fixed; top: 0;  left: 0; width: 100%;  height: 64px; line-height: 64px; z-index: 10; background: #fff; }
+.header.hide{z-index: -10;}
+.header-group{display: flex; justify-content: space-between; align-items: center; padding: 0 104px 0 98px;}
+
+.header .link-logo{display: block; height: 100%;}
+.header .link-logo::after{ content: ''; display: inline-block; background-position: -105px 0px; width: 223px; height: 35px; vertical-align: middle; }
+
+.header .gnb{ margin-left: 39px; font-size: 17px; letter-spacing: -0.36px; margin-right: auto; }
+.header .gnb .gnb-list{display: flex; gap: 20px;}
+.header .gnb .gnb-item{ flex: 1; }
+.header .gnb .gnb-item{position: relative;}
+.header .gnb .sub-list{ position: absolute; top: 64px; z-index: 10; display: none; left: 0; line-height: 32px; height: 182px; }
+.header .gnb .link-gnb{ line-height: 64px; display: block; }
+
+/* 마우스 올렸을 때 */
+.header.active::after{content: ''; position: absolute; top: 64px; background-color: rgba(255, 255, 255, 0.98); width: 100%; height: 182px;}
+.header .gnb .link-gnb:hover span{ border-bottom: 1px solid #000; }
+.header .gnb .sub-list.active{display: block; }
+
+.header .util-area .util-list{display: flex; gap: 20px;}
+.header .util-area .util-item{ font-size: 17px; letter-spacing: -0.36px; }
+.header .util-area .link-item{ display: block; }
+
+
+
+/* 언어선택 */
+.citylang{ width: 40px; height: 100%; position: relative;}
+.citylang select { font-size: 17px; letter-spacing: -0.36px; width: 100%; height: 100%;  border: 0; appearance: none; box-sizing: border-box; background-color: transparent; }
+/* 배경 투명 필수 */
+#lang:focus{outline: none;}
+.citylang .btn-lang{ position: absolute; top: 50%; transform: translateY(-50%); margin-left: -10px; display: inline-block; width: 10px; height: 6px; background-position: -122px -93px;}
+/* 클릭 시 버튼 화살표 회전 */
+.citylang .btn-lang.click{transform: rotate(180deg);}
+
+
+
+/* 반응형 메뉴 */
+.menu-open{ position: fixed; right: -100%; top: 60px; width: 100%; height: 100%; background: #fff; z-index: 1; padding: 0 22px; box-sizing: border-box; transition: 0.3s; overflow-y: auto; }
+.menu-open .sub-menu-item{ margin-top: 13px; }
+.menu-open .sub-menu-list{ padding: 3px 2 2px 15px; font-size: 18px; line-height: 28px; letter-spacing: -0.36px; background-color: #fff; font-weight: normal; }
+
+
+.footer{ align-items: center; padding: 25px 104px 25px 98px; background-color: #f2f2f2; display: flex; justify-content: space-between; align-items: center; }
+.footer .left-area{display: flex; gap: 30px;}
+.footer .left-area a{display: block; line-height: 32px;}
+.footer .left-area .link-copy{font-size: 18px; letter-spacing: -0.32px;}
+.footer .left-area .link-policy{font-size: 14px; letter-spacing: -0.28px; color: #909090;}
+
+.footer .site-group{ position: relative; width: 280px; line-height: 42px; text-align: left; background-color: #f2f2f2; border-bottom: 1px solid #000; }
+.footer .site-group button{ border:0; padding-left: 0; width: 100%; text-align: left; height: 42px; }
+.footer .site-group .title::after{ content: ""; position: absolute; top: 18px; right: 0; background-position: -122px -93px; width: 10px; height: 6px; }
+.footer .site-group .flex-site{ display: none; }
+.footer .site-group .site-list{ position: absolute; bottom: 42px; left: 0; right: 0; background-color: #fff; z-index: 10; }
+.footer .site-group .site-item{ font-size: 18px; line-height: 45px; padding: 0 12px; }
+
+/* 클릭시 */
+.footer .site-group.click{ background-color: #fff; border: 0; }
+.footer .site-group.click .flex-site{ display: block; }
+.footer .site-group.click button{ width: 100%; text-align: left; background-color: #fff; padding-left: 9px; }
+.footer .site-group.click .title::after{ margin-right: 5px; transform: rotate(180deg); }
+
+.footer .site-group .title.click{ line-height: 42px; padding: 0 12px; background-color: #fff; }
+.footer .site-group .title.click::after{transform: rotate(180deg); margin-right: 5px; }
+/* 마우스 올렸을 때 */
+.footer .site-group .site-item:hover{ background-color: #f2f2f2; }
+
+
+
+/* 반응형 메뉴 */
+.btn-menu{display: none; background-color: transparent; }
+.menu-open .sub-menu-list{display: none;}
+
+/* 1300 */
+@media (max-width: 1230px){ 
+    /* 768까지잡아야함 */
+    
+    .header-group{
+        padding: 0 22px;
+    }
+    .header .header-group .link-logo::after {
+        background-image: url(https://recruit.navercorp.com/share/tmplat/naver/img/sp_mo.png);
+        background-size: 195px 181px;
+        background-position: 0px 0px;
+        width: 160px;
+        height: 23px;
+    }
+    .header .gnb{display: none;}
+    .header .util-area{display: none;}
+    .btn-menu{
+        display: block;
+        background-position: -85px -28px;
+        width: 20px;
+        height: 14px;
+        border: 0;
+    }
+    .btn-menu.close{
+        display: block;
+        background-position: -85px -49px;
+        width: 15px;
+        height: 15px;
+        border: 0;
+    }
+    .menu-open > ul{
+        padding: 11px 0 9px;
+        font-size: 22px;
+        line-height: 46px;
+        letter-spacing: -0.44px;
+        border-bottom: 1px solid #d0d0d0;
+    }
+    .menu-open .menu-item .link-item{
+        display: flex;
+        display: block;
+        width: 100%;
+    }
+    .menu-open .menu-item .link-item .arrow-icon{
+        display: inline-block;
+        width: 10px;
+        height: 6px;
+        background-position: -136px -49px;
+        margin-left: 5px;
+    }
+    .menu-open.on{
+        right: 0;
+    }   
+    .menu-open .menu-item .link-item.click{
+        background-color: #f2f2f2;
+    }
+    .menu-open .menu-item .link-item.click .arrow-icon{
+        transform: rotate(180deg);
+    }
+    .footer{
+        padding: 25px 20px 25px 20px
+    }
+}
+
+
+
+/* 768 */
+@media (max-width: 768px){
+    /* //320을보고잡는다 */
+
+    .footer{
+        display: block;
+    }
+    .footer .left-area .link-copy{
+        font-size: 15px;
+        line-height: 22px;
+        letter-spacing: -0.3px;
+    }
+    .footer .left-area .link-policy{
+        font-size: 14px;
+        line-height: 22px;
+        letter-spacing: -0.28px;
+        color: #909090;
+    }
+    .footer .site-group{
+        margin-top: 15px;
+        font-size: 15px;
+        width: 100%;
+    }
+    .footer .site-group .site-item{ font-size: 12px;
+        line-height: 48px;}
+
+    
+}
