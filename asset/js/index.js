@@ -196,6 +196,8 @@ $('.search-area-min').click(function(e){
   e.preventDefault();
 
   $(this).siblings('.search-menu').addClass('on');
+  $('body').addClass('overflow');
+  $('.header').addClass('hide');
 });
 $('.search-menu .link-item').click(function(e){
   e.preventDefault();
@@ -212,6 +214,8 @@ $('.search-menu .close').click(function(e){
   e.preventDefault();
 
   $('.search-menu').removeClass('on');
+  $('body').removeClass('overflow');
+  $('.header').removeClass('hide');
 });
 
 
