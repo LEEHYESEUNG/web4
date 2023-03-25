@@ -213,7 +213,6 @@
         position: relative;
         height: 0;
         padding-bottom: 100%;
-        background: #f00;
     }
     .visual .video-area video{
         position: absolute;
