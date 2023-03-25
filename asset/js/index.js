@@ -26,7 +26,6 @@ $(function(){
 
 
 
-
 /**
  * 
  * 언어선택
@@ -42,7 +41,6 @@ $(function(){
 
 
 
-
 /**
  * 
  * 검색영역 
@@ -55,8 +53,6 @@ $(function(){
    $('.select').change(function(){
       $(this).addClass('active')
    });
-
-
 
 
     
@@ -109,7 +105,6 @@ $(function(){
 
 
 
-
 /**
  * 
  * benefits
@@ -138,8 +133,6 @@ $(function(){
       },
     }
   });
-    
-    
     
     
 
@@ -183,6 +176,8 @@ $('.menu-open .link-item').click(function(e){
 });
 
 
+    
+    
 /**
  * 
  * 반응형 검색메뉴
@@ -214,6 +209,21 @@ $('.search-menu .close').click(function(e){
   e.preventDefault();
 
   $('.search-menu').removeClass('on');
+  
+  if($('input').is(":checked")) {
+    $('input').prop('checked',false)
+  };
+
+  if( $('.search-menu .sub-list').slideDown() ){
+    $('.search-menu .sub-list').slideUp();
+
+  };
+
+  if( $('.search-menu .sub2-list').slideDown() ){
+    $('.search-menu .sub2-list').slideUp();
+
+  };
+   
   $('body').removeClass('overflow');
   $('.header').removeClass('hide');
 });
