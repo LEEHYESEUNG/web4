@@ -1,5 +1,16 @@
 $(function(){
-
+  /**
+ * 
+ * a 태그 클릭 이벤트 정지
+ *
+ * @version 1.0.0
+ * @since 
+ * @author 
+ * @pram
+ */        
+  $('a').click(function(e){
+    e.preventDefault();
+  });
     
     
   /**
