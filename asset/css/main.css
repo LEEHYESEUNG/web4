@@ -10,12 +10,12 @@
     }
 }
 @keyframes fade {
-0% {
-    opacity: 0;
-}
-100% {
-    opacity: 1;
-}
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 /************** section : visual ***************/
 .visual .video-area{ position: relative; }
@@ -48,8 +48,7 @@
 .search-area .search:hover{background-color: #16ef72; color: #000;}
 /* 검색 영역 반응형 : 768 */
 .search-area-min{ display: none; z-index: 1; position: absolute; left: 22px; right: 22px; top: 30px; }
-.search-area-min .search-box{ display: block; width: 100%; position: relative; }
-.search-area-min .search-box::after{ content: ''; display: inline-block; position: absolute; background-position: -140px -125px; width: 19px; height: 19px; right: 10px; top: 50%; transform: translateY(-50%); }
+.search-area-min::after{ content: ''; display: inline-block; position: absolute; background-position: -140px -125px; width: 19px; height: 19px; right: 10px; top: 50%; transform: translateY(-50%); }
 .search-area-min .input-text-min{ border: 0; width: 100%; background-color: #ebebeb; font-size: 14px; line-height: 22px; letter-spacing: -0.28px; color: #696868; font-weight: bold; padding: 10px; box-sizing: border-box; cursor: pointer; }
 .search-area-min .input-text-min:focus{ outline: none; }
 /* 반응형 검색메뉴 */
@@ -57,9 +56,9 @@
 .search-menu .close{ display: inline-block; position: absolute; top: 24px; left: 22px; background-position: -110px -28px; background-color: transparent; width: 14px; height: 14px; border: 0; cursor: pointer; }
 .search-menu .close:focus{ outline: none; }
 .search-menu .search-box{ width: 100%; border-bottom: 1px solid #d0d0d0; position: relative; }
-.search-menu .search-box .input-text{ border: 0; width: 100%; padding: 6px 30px 6px 0; cursor: pointer; }
-.search-menu .search-box .input-text:focus{ outline: none; }
-.search-menu .search-box .input-text::placeholder{ opacity: 0.5; }
+.search-menu .input-text{ border: 0; width: 100%; padding: 6px 30px 6px 0; cursor: pointer; }
+.search-menu .input-text:focus{ outline: none; }
+.search-menu .input-text::placeholder{ opacity: 0.5; }
 .search-menu .search-box::after{ content: ''; display: inline-block; position: absolute; right: 0; top: 50%; transform: translateY(-50%); background-position: -268px -40px; width: 15px; height: 15px; }
 .search-menu .list-title{ line-height: 26px; letter-spacing: -0.28px; font-size: 14px; font-weight: bold; }
 .search-menu .search-list{ margin-top: 45px; }
@@ -275,5 +274,6 @@
         width: 31px;
         height: 31px;
     }
+   
 }
 
