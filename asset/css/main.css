@@ -1,11 +1,3 @@
-
-.visual .video-area{ position: relative; }
-.visual .video-area video{ width: 100%; height: 544px; object-fit: cover; }
-.visual .video-area h3{ position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); }
-.visual .video-area h3 br{ display: none; }
-.visual .video-area h3 span{ display: block; width: 0px; overflow: hidden; font-size: clamp(50px,6vw,100px); line-height: 1.2; letter-spacing: -2.4px; font-weight: 800; white-space: nowrap; color: #fff; text-shadow: 6px 6px 18px rgb(0 0 0 / 16%); padding: 20px; box-sizing: border-box; }
-
-.visual .swiper-slide-active span{ opacity: 0; animation: wave-in 0.3s ease-out forwards, fade 0.8s linear forwards; animation-delay: 0.8s; }
 @keyframes wave-in {
     0% {
       width: 0%;
@@ -16,19 +8,23 @@
     100% {
       width: 100%;
     }
-  }
-
-  @keyframes fade {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-
-
-/* 검색영역 : 포지션을 주고 위로 올려서 검색영역을 가운데에 위치하게 함*/
+}
+@keyframes fade {
+0% {
+    opacity: 0;
+}
+100% {
+    opacity: 1;
+}
+}
+/************** section : visual ***************/
+.visual .video-area{ position: relative; }
+.visual .video-area video{ width: 100%; height: 544px; object-fit: cover; }
+.visual .video-area h3{ position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); }
+.visual .video-area h3 br{ display: none; }
+.visual .video-area h3 span{ display: block; width: 0px; overflow: hidden; font-size: clamp(50px,6vw,100px); line-height: 1.2; letter-spacing: -2.4px; font-weight: 800; white-space: nowrap; color: #fff; text-shadow: 6px 6px 18px rgb(0 0 0 / 16%); padding: 20px; box-sizing: border-box; }
+.visual .swiper-slide-active span{ opacity: 0; animation: wave-in 0.3s ease-out forwards, fade 0.8s linear forwards; animation-delay: 0.8s; }
+/************** section : search ***************/
 .flex-group{ position: relative; top: -27px; z-index: 1; }
 .search-area{ display: block; z-index: 1; height: 54px; max-width: 1199px; background: #fff; margin: 0 auto;}
 .search-area .wrap{ display: flex; font-weight: bold; }
@@ -50,16 +46,12 @@
 .search-area input:focus {outline: none;}
 .select:focus{outline: none;}
 .search-area .search:hover{background-color: #16ef72; color: #000;}
-
-
-
 /* 검색 영역 반응형 : 768 */
 .search-area-min{ display: none; z-index: 1; position: absolute; left: 22px; right: 22px; top: 30px; }
 .search-area-min .search-box{ display: block; width: 100%; position: relative; }
 .search-area-min .search-box::after{ content: ''; display: inline-block; position: absolute; background-position: -140px -125px; width: 19px; height: 19px; right: 10px; top: 50%; transform: translateY(-50%); }
 .search-area-min .input-text-min{ border: 0; width: 100%; background-color: #ebebeb; font-size: 14px; line-height: 22px; letter-spacing: -0.28px; color: #696868; font-weight: bold; padding: 10px; box-sizing: border-box; cursor: pointer; }
 .search-area-min .input-text-min:focus{ outline: none; }
-
 /* 반응형 검색메뉴 */
 .search-menu{ position: fixed; left: -100%; top: 0; width: 100%; height: 100%; background: #fff; z-index: 10; padding: 60px 32px; overflow-y: auto; box-sizing: border-box; }
 .search-menu .close{ display: inline-block; position: absolute; top: 24px; left: 22px; background-position: -110px -28px; background-color: transparent; width: 14px; height: 14px; border: 0; cursor: pointer; }
@@ -83,8 +75,7 @@
 .search-menu [type='checkbox']:checked{ border: 1px solid #fff; background-color: #000; }
 .search-menu .clear-filters{ display: block; margin-top: 42px; position: relative; top: auto; right: auto; }
 .search-menu .clear-filters span{ font-size: 12px; line-height: 22px; letter-spacing: -0.24px; border-bottom: 1px solid #000; }
-
-
+/************** section : teams ***************/
 /* teams : 마진탑 마이너스로 비주얼과 팀 사이의 빈 공간을 메꿔줌 */
 .teams{ margin-top: -30px; padding-bottom: 89px; background-color: #fafafa; padding-top: 126px; }
 .teams .teams-list{ margin-top: 70px;}
@@ -95,8 +86,7 @@
 .teams .teams-item .link-item .crop-text::after{ content: ''; position: absolute; background-position: -176px -105px; width: 9px; height: 9px; top: -1px; right: -14px;}
 .teams .teams-item .link-item .desc{flex: 1; padding: 20px 0 20px 15px; font-size: 22px; line-height: 60px; letter-spacing: -0.44px; }
 .teams .teams-item:hover{ background-color: #ebebeb; }
-
-
+/************** section : people ***************/
 /* people */
 .people{padding-top: 95px; overflow: hidden;}
 .people .inner{margin-bottom: 60px;}
@@ -110,8 +100,7 @@
 .people .link-slide .title-box .more::after{ content: ''; position: absolute; top: 18px; left: 0; right: 0; height: 1px; background: #000; }
 .people .link-slide .name-box{display: flex; gap: 12px; margin-top: 16px; font-size: 14px; line-height: 24px; letter-spacing: -0.28px; color: #000;}
 .people .link-slide .name::before{ content: ""; display: inline-block; width: 1px; height: 10px; background-color: #000; margin-right: 9px; }
-
-
+/************** section : benefits ***************/
 /* benefits */
 .benefits{padding-top: 112px;}
 .benefits .inner{margin-bottom: 55px;}
@@ -121,22 +110,20 @@
 .benefits .link-slide img{ position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; }
 .benefits .link-slide .title-box {margin-top: 29px;}
 .benefits .link-slide .title{line-height: 36px; font-size: 25px; letter-spacing: -0.5px; font-weight: bold;}
-.benefits .link-slide .desc{margin-top: 20px; font-size: 18px; line-height: 30px; letter-spacing: -0.36px; color: #000;}
-
+.benefits .link-slide .desc{display: block; margin-top: 20px; font-size: 18px; line-height: 30px; letter-spacing: -0.36px; color: #000;}
+/************** section : support ***************/
 /* 지원하기 */
 .support{padding: 95px 0 102px;}
 .support .sc-title{font-size: 25px; line-height: 32px; letter-spacing: -0.25px; }
 .support .link-support .title{display: inline-block; vertical-align: middle; font-size: 18px; line-height: 27px; letter-spacing: -0.36px; font-family: "NanumSquare", "나눔스퀘어", "돋움", dotum, arial, sans-serif;}
 .support .link-support .support-icon{ display: inline-block; vertical-align: middle; margin-left: 11px; background-position: -76px -172px; height: 32px; width: 33px; }
 
-
-/* 공통 */
+/************** 공통 ***************/
 .inner{ max-width: 1408px; margin: 0 auto; padding: 0 104px; box-sizing: border-box; }
 .sc-title{ font-size: 64px; line-height: 71px; letter-spacing: -0.64px; margin-bottom: 20px; font-weight: bold;}
 .desc-box{ padding-right: 30px; font-size: 22px; line-height: 32px; letter-spacing: -0.44px; font-weight: bold; display: flex; gap: 30px; }
 .btn-more{ display: inline-block; font-size: 14px; line-height: 18px; font-weight: normal; letter-spacing: -0.36px; vertical-align: top; position: relative; }
 .btn-more::after{ content: ""; position: absolute; top: 18px; left: 0; right: 0; height: 1px; background: #000; }
-
 
 /* slide btn */
 .control-box{display: flex; justify-content: end; margin-top: 68px; }
@@ -146,51 +133,37 @@
 .control-box .swiper-button-disabled::after{ opacity: 0.5;}
 
 
-
-
-/* 반응형 검색메뉴  */
+/************* 반응형 검색메뉴 ***************/
 .search-menu .sub-list{display: none;}
 .search-menu .sub2-list{display: none;}
 
-
-
-/* 1300 */ /* 768까지잡아야함 */
+/* 1300 */ 
 @media (max-width: 1230px){ 
-    
     .inner{
         padding: 0 22px;
     }
-
     .search-area .keyword-box label{
         padding-left: 48px;
     }
     .search-area .keyword-box::before{
         left: 15px;
     }
-
     /* .people */
     .people .people-slide{
-        padding: 0 22px;
+        padding: 0 20px;
     }
      /* .benefits */
      .benefits .bene-slide{
-        padding: 0 22px;
+        padding: 0 20px;
     }
 }
-
-
-
-
-/* 768 */ /* //320을보고잡는다 */
+/* 768 */
 @media (max-width: 768px){
-   
-
     .btn-more{
         font-size: 12px;
         line-height: 22px;
         letter-spacing: -0.24px;
         flex-shrink: 0;
-
     }
     .sc-title{
         margin-bottom: 11px;
@@ -213,6 +186,7 @@
         position: relative;
         height: 0;
         padding-bottom: 100%;
+        background: #f00;
     }
     .visual .video-area video{
         position: absolute;
@@ -281,14 +255,14 @@
     .benefits .inner {
         margin-bottom: 25px;
     }
-    .benefits .link-slide .title{font-size: 18px;}
-    /* desc 줄바꿈 수정 */
+    .benefits .link-slide .title{
+        font-size: 18px;
+    }
     .benefits .link-slide .desc{
         margin-top: 3px;
         font-size: 14px;
         line-height: 26px;
         letter-spacing: -0.28px; 
-    
     }
     .support .sc-title{
         font-size: 20px;
@@ -301,6 +275,5 @@
         width: 31px;
         height: 31px;
     }
-   
 }
 
