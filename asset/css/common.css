@@ -23,7 +23,7 @@ body.overflow{ overflow: hidden; }
 }
 
 
-.search-area-min .search-box::after,
+.search-area-min::after,
 .menu-open .menu-item .arrow-icon,
 .btn-menu,
 .btn-menu.close,
