@@ -61,7 +61,7 @@
 .search-menu .input-text::placeholder{ opacity: 0.5; }
 .search-menu .search-box::after{ content: ''; display: inline-block; position: absolute; right: 0; top: 50%; transform: translateY(-50%); background-position: -268px -40px; width: 15px; height: 15px; }
 .search-menu .list-title{ line-height: 26px; letter-spacing: -0.28px; font-size: 14px; font-weight: bold; }
-.search-menu .search-list{ margin-top: 45px; }
+.search-menu .choice{ margin-top: 45px; }
 .search-menu .search-item{ margin-top: 14px; font-size: 14px; line-height: 26px; letter-spacing: -0.28px; font-family: 'nanumsquare'; position: relative; }
 .search-menu .search-list.jobgroup .search-item{ padding-left: 19px; }
 .search-menu .search-list.jobgroup .search-item::before{ content: ''; display: inline-block; position: absolute; width: 8px; height: 5px; background-position: -136px -93px; top: 9px; left: 2px; }
@@ -274,6 +274,5 @@
         width: 31px;
         height: 31px;
     }
-   
 }
 
