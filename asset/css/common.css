@@ -1,7 +1,7 @@
 body{ font-family: 'tthoves', 'nanumsquare', sans-serif; color: #000; font-size: 14px; font-weight: normal; }
 body.overflow{ overflow: hidden; }
 
-.blind{ position: absolute; overflow: hidden; width: 1px; height: 1px; clip: rect(0 0 0 0); margin: -1px; }
+.blind{ position: absolute; overflow: hidden; width: 1px; height: 1px; clip: rect(0, 0, 0, 0); margin: -1px; }
 
 
 /* icon (공용) */
